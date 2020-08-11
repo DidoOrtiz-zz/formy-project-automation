@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertEquals;
 
 public class Form {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "/Users/didiortiz/Documents/automation/LinkedinCourses/Ex_Files_Selenium_EssT/chromedriver");
 
@@ -20,7 +20,7 @@ public class Form {
 
         formPage.submitForm(driver);
 
-//As at this point We will need to switch pages We'll need to expect some time
+//As at this point We will need to switch pages We'll need to expect some time.
 
         ConfirmationPage confirmationPage = new ConfirmationPage();
         confirmationPage.waitForAlertBanner(driver);
